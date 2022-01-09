@@ -1,7 +1,5 @@
-FROM node:lts-alpine
+FROM python:3.9-alpine3.15
 
-WORKDIR /usr/app
-
-RUN npm install yamllint
+RUN pip install yamllint
 
 ENTRYPOINT ["yamllint"]
